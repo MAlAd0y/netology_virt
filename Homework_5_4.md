@@ -8,10 +8,7 @@ https://ibb.co/BtnNknw
 
 Задача 3. 
 
-На шаге Installing tools, ansible вываливается с ошибкой:
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+fatal: [node01.netology.cloud]: FAILED! => {"changed": false, "msg": "Could not find or access 'stack/'\nSearched in:\n\t/var/netology/netology_virt/ansible/files/stack/\n\t/var/netology/netology_virt/ansible/stack/\n\t/var/netology/netology_virt/ansible/files/stack/\n\t/var/netology/netology_virt/ansible/stack/ on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
 
-TASK [Installing tools] **************************************************************************************************
-failed: [node01.netology.cloud] (item=git) => {"ansible_loop_var": "item", "changed": false, "item": "git", "msg": "Unsupported parameters for (ansible.legacy.yum) module: package. Supported parameters include: lock_timeout, disable_excludes, exclude, allow_downgrade, disable_gpg_check, conf_file, use_backend, validate_certs, state, disablerepo, releasever, skip_broken, cacheonly, autoremove, download_dir, name (pkg), installroot, install_weak_deps, update_cache (expire-cache), download_only, bugfix, list, install_repoquery, update_only, disable_plugin, enablerepo, security, enable_plugin."}
-failed: [node01.netology.cloud] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "Unsupported parameters for (ansible.legacy.yum) module: package. Supported parameters include: lock_timeout, disable_excludes, exclude, allow_downgrade, disable_gpg_check, conf_file, use_backend, validate_certs, state, disablerepo, releasever, skip_broken, cacheonly, autoremove, download_dir, name (pkg), installroot, install_weak_deps, update_cache (expire-cache), download_only, bugfix, list, install_repoquery, update_only, disable_plugin, enablerepo, security, enable_plugin."}
-
-Насколько я понимаю, он не может установить из-за недоступности репозиториев.
+Ошибку с установкой исправил, но так и не смог скачать папку stack из вашего репоизитория, access denied. Не могу понять почему нет доступа.
